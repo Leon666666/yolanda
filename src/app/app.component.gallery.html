@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="line">
+    <div *ngFor="let img of line.slice(0, 2)" class="grid">
+      <img [id]="img.id" class="element" (click)="showModal(img.id)" [src]="img.src" [alt]="img.id">
+      <div class="description">
+        <h3>{{ img.title }}</h3>
+        <p>{{ img.class }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="line">
+    <div *ngFor="let img of line.slice(2, 4)" class="grid">
+      <img [id]="img.id" class="element" (click)="showModal(img.id)" [src]="img.src" [alt]="img.id">
+      <div class="description">
+        <h3>{{ img.title }}</h3>
+        <p>{{ img.class }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="line">
+    <div *ngFor="let img of line.slice(4, 6)" class="grid">
+      <img [id]="img.id" class="element" (click)="showModal(img.id)" [src]="img.src" [alt]="img.id">
+      <div class="description">
+        <h3>{{ img.title }}</h3>
+        <p>{{ img.class }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <div id="title"></div>
+  <div id="description"></div>
+  <!-- The Close Button -->
+  <span (click)="closeImg()" class="close">&times;</span>
+
+  <!-- Modal Content (The Images) -->
+
+  <div *ngFor="let imgSrc of set">
+    <img class="modal-content" [src]="imgSrc">
+  </div>
+</div>

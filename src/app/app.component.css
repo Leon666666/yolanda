@@ -1,0 +1,21 @@
+.navBarBt {
+    width: 200px;
+    height: 80px;
+    font-size: 25px;
+    padding: 10px;
+    margin: 0px;
+    border: none;
+    background: #000000;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.navBarBt:hover {
+    background: #FFFFFF;
+    color: #CACACA;
+}
+
+.navBar {
+    width: 100%;
+    background: #000000;
+}

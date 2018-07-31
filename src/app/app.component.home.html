@@ -1,0 +1,8 @@
+<div class="container">
+  <div *ngFor="let highLight of highLights" [id]="highLight.id" (mouseenter)="extend(highLight.id)" (mouseleave) ="fold(highLight.id)" class="holder">
+    <img class="highLight" [src]="highLight.src" alt="">
+  </div>
+  <div class="selfIntro">
+    <h1>hello this is self description.hello this is self description.hello this is self description.hello this is self description.hello this is self description.hello this is self description.hello this is self description.hello this is self description.</h1>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+.highLight {
+  height: 900px;
+}
+
+.holder {
+  height: 900px;
+  width: 5%;
+  overflow: hidden;
+  float: left;
+  border-left: 3px solid #000000;
+  cursor: pointer;
+}
+
+.selfIntro {
+  height: 900px;
+  width: 77%;
+  float: left;
+  border-left: 3px solid #000000;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.container {
+  overflow: hidden;
+  height: 900px;
+}
