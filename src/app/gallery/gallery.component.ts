@@ -3,11 +3,12 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'gallery',
-  templateUrl: './app.component.gallery.html',
-  styleUrls: ['./app.component.gallery.css'],
+  templateUrl: './gallery.component.html',
+  styleUrls: ['./gallery.component.css'],
 })
 export class Gallery implements OnInit {
-  set: string[];
+  set = {};
+  modalDisplay = 'none';
   readonly line = [
     {
       id: '1',
@@ -66,29 +67,18 @@ export class Gallery implements OnInit {
     ]}
   ];
 
-  constructor(private router: Router) {
+  constructor(private router: Router) {}
 
-  }
-
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   showModal(id: string) {
-    let modal = document.getElementById('myModal');
-    let modalImg = document.getElementById("img01");
-    let descriptionText = document.getElementById("description");
-    let titleText = document.getElementById("title");
-
     for (let image in this.line) {
        let target = this.line[image];
-       if (target.id == id) { this.set = target.sub};
-       descriptionText.innerHTML = target.discription;
-       titleText.innerHTML = target.title;
+       if (target.id == id) {
+         this.set = target;
+         this.modalDisplay = 'block';
+         break;
+       };
     };
-    modal.style.display = "block";
-  }
-
-  closeImg() {
-     document.getElementById('myModal').style.display = "none";
   }
 }

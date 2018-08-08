@@ -27,16 +27,4 @@
     </div>
   </div>
 </div>
-
-<div id="myModal" class="modal">
-  <div id="title"></div>
-  <div id="description"></div>
-  <!-- The Close Button -->
-  <span (click)="closeImg()" class="close">&times;</span>
-
-  <!-- Modal Content (The Images) -->
-
-  <div *ngFor="let imgSrc of set">
-    <img class="modal-content" [src]="imgSrc">
-  </div>
-</div>
+<modal [set]="set" [modalDisplay]="modalDisplay"></modal>

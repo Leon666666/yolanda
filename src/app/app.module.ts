@@ -4,15 +4,16 @@ import { RouterModule, Routes} from '@angular/router';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { Home } from './app.component.home';
-import { ShowCase } from './app.component.showCase';
-import { Gallery } from './app.component.gallery';
+import { Home } from './home/home.component';
+import { ShowCase } from './showCase/showCase.component';
+import { Gallery } from './gallery/gallery.component';
+import { Modal } from './modal/modal.component';
 
 const appRoutes: Routes = [
   { path: '',  component: ShowCase },
   { path: 'home',  component: Home },
   { path: 'gallery',  component: Gallery },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: 'home' }
 ];
 
 @NgModule({
@@ -20,7 +21,8 @@ const appRoutes: Routes = [
     AppComponent,
     Home,
     ShowCase,
-    Gallery
+    Gallery,
+    Modal
   ],
   imports: [
     BrowserModule,

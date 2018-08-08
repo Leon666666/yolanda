@@ -1,0 +1,12 @@
+<div id="myModal" class="modal" [style.display]="modalDisplay">
+  <div id="title">{{ set.title }}</div>
+  <div id="description">{{ set.discription }}</div>
+  <!-- The Close Button -->
+  <span (click)="closeImg()" class="close">&times;</span>
+
+  <!-- Modal Content (The Images) -->
+
+  <div *ngFor="let imgSrc of set.sub">
+    <img class="modal-content" [src]="imgSrc">
+  </div>
+</div>
