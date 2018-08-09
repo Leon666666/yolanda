@@ -11,6 +11,12 @@
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
+.h-modal-holder {
+    overflow: auto;
+    float: left;
+    margin: auto;
+}
+
 /* Modal Content (Image) */
 .modal-content {
     margin: auto;

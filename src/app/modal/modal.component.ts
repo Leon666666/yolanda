@@ -7,17 +7,28 @@ import { Component, OnChanges, Input, SimpleChanges } from '@angular/core';
 })
 export class Modal implements OnChanges {
   @Input('set') set: any;
-  @Input('modalDisplay') modalDisplay: any;
+  hWidth = '30%';
+  modalDisplay = {
+    v: 'none',
+    h: 'none'
+  };
 
   constructor() { }
 
   ngOnChanges(changes: SimpleChanges) {
     if (!changes.set.firstChange) {
-      this.modalDisplay = 'block';
+      if (changes.set.currentValue.layout == 'v') {
+        this.modalDisplay.v = 'block';
+        return;
+      };
+      let width = Math.round(100 / changes.set.currentValue.sub.length) - 1;
+      this.hWidth = String(width) + '%';
+      this.modalDisplay.h = 'block';
     }
   }
 
   closeImg() {
-    this.modalDisplay = 'none';
+    this.modalDisplay.v = 'none';
+    this.modalDisplay.h = 'none';
   }
 }

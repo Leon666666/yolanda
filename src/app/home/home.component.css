@@ -4,16 +4,16 @@
 
 .holder {
   height: 900px;
-  width: 5%;
+  width: 10%;
   overflow: hidden;
   float: left;
-  border-left: 3px solid #000000;
+  border-left: 6px solid #CACACA;
   cursor: pointer;
 }
 
 .selfIntro {
   height: 900px;
-  width: 77%;
+  width: 57%;
   float: left;
   border-left: 3px solid #000000;
   cursor: pointer;
