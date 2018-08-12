@@ -8,11 +8,15 @@ import { Home } from './home/home.component';
 import { ShowCase } from './showCase/showCase.component';
 import { Gallery } from './gallery/gallery.component';
 import { Modal } from './modal/modal.component';
+import { Control } from './control/control.component';
+import { Contact } from './contact/contact.component';
 
 const appRoutes: Routes = [
   { path: '',  component: ShowCase },
   { path: 'home',  component: Home },
   { path: 'gallery',  component: Gallery },
+  { path: 'contact', component: Contact },
+  { path: 'control', component: Control },
   { path: '**', redirectTo: 'home' }
 ];
 
@@ -22,7 +26,9 @@ const appRoutes: Routes = [
     Home,
     ShowCase,
     Gallery,
-    Modal
+    Modal,
+    Control,
+    Contact
   ],
   imports: [
     BrowserModule,
